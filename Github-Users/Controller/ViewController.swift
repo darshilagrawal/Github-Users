@@ -11,7 +11,7 @@ class ViewController: UIViewController{
     var since=0
     let baseUrl="https://api.github.com/users?per_page=20"
     var fetchedUser=[User]()
-
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,12 +19,12 @@ class ViewController: UIViewController{
         tableView.delegate=self
         fetchData()
     }
-
+    
 // MARK: API CALL
     func fetchData(){
-         let finalURL = "\(baseUrl)&since=\(since)"
+        let finalURL = "\(baseUrl)&since=\(since)"
         guard let url = URL(string: finalURL) else{
-        return
+            return
         }
         
         var request = URLRequest(url: url)
@@ -37,7 +37,7 @@ class ViewController: UIViewController{
             if let unwrappedData = data{
                 do{
                     let resultantData=try JSONSerialization.jsonObject(with: unwrappedData, options: .mutableLeaves) as! NSArray
-//                    print(resultantData)
+                    //                    print(resultantData)
                     for individualUser in resultantData{
                         let eachUser=individualUser as! [String:Any]
                         let login = eachUser["login"] as! String
@@ -82,9 +82,9 @@ extension ViewController:UITableViewDataSource  , UITableViewDelegate{
             cell.rowImage.loadFrom(url: url)
         }
         
-            
+        
         return cell
-
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100.0
@@ -96,9 +96,9 @@ extension ViewController:UITableViewDataSource  , UITableViewDelegate{
             
         }
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        print(indexPath.row)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        //        print(indexPath.row)
+//    }
 }
 
 // MARK: Preparation for Segues
@@ -109,8 +109,8 @@ extension ViewController{
         
         let showDetailsController = segue.destination as! ShowDetailsController
         if let index = indexPath?.row {
-        showDetailsController.login=fetchedUser[index].login
-        showDetailsController.imageValue=fetchedUser[index].avatar_url
+            showDetailsController.login=fetchedUser[index].login
+            showDetailsController.imageValue=fetchedUser[index].avatar_url
         }
     }
 }

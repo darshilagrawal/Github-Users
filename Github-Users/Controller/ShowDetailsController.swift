@@ -17,18 +17,16 @@ class ShowDetailsController: UIViewController {
     override func viewDidLoad() {
         navigationItem.title=login
         super.viewDidLoad()
-//        print(imageValue!)
-//        print(login!)
+        //        print(imageValue!)
+        //        print(login!)
         nameOfUser.text = login ?? "Default User"
         guard let url = URL(string: imageValue) else { return }
         profileImage.loadFrom(url: url)
         
-//        displayImage.loadFrom(url:url)
-
-        // Do any additional setup after loading the view.
+        
     }
     
-
+    
 }
 
 
