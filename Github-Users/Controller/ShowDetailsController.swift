@@ -17,8 +17,8 @@ class ShowDetailsController: UIViewController {
     override func viewDidLoad() {
         navigationItem.title=login
         super.viewDidLoad()
-        print(imageValue!)
-        print(login!)
+//        print(imageValue!)
+//        print(login!)
         nameOfUser.text = login ?? "Default User"
         guard let url = URL(string: imageValue) else { return }
         profileImage.loadFrom(url: url)
@@ -31,16 +31,4 @@ class ShowDetailsController: UIViewController {
 
 }
 
-extension UIImageView {
-    func loadFrom(url: URL) {
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: url) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.image = image
-                    }
-                }
-            }
-        }
-    }
-}
+

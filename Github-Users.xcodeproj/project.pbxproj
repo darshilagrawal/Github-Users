@@ -15,6 +15,8 @@
 		D5AC70E0264A790B00DEE93F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5AC70DE264A790B00DEE93F /* LaunchScreen.storyboard */; };
 		D5AC70E8264A8ED400DEE93F /* githubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70E7264A8ED400DEE93F /* githubData.swift */; };
 		D5AC70EA264ABD9F00DEE93F /* ShowDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70E9264ABD9F00DEE93F /* ShowDetailsController.swift */; };
+		D5AC70EF264AE9F600DEE93F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70EE264AE9F600DEE93F /* Helper.swift */; };
+		D5AC70F4264AEEA700DEE93F /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70F3264AEEA700DEE93F /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D5AC70E1264A790B00DEE93F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5AC70E7264A8ED400DEE93F /* githubData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubData.swift; sourceTree = "<group>"; };
 		D5AC70E9264ABD9F00DEE93F /* ShowDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDetailsController.swift; sourceTree = "<group>"; };
+		D5AC70EE264AE9F600DEE93F /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		D5AC70F3264AEEA700DEE93F /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +64,51 @@
 		D5AC70D2264A790700DEE93F /* Github-Users */ = {
 			isa = PBXGroup;
 			children = (
-				D5AC70D3264A790700DEE93F /* AppDelegate.swift */,
-				D5AC70D5264A790700DEE93F /* SceneDelegate.swift */,
-				D5AC70E9264ABD9F00DEE93F /* ShowDetailsController.swift */,
-				D5AC70D7264A790700DEE93F /* ViewController.swift */,
-				D5AC70D9264A790700DEE93F /* Main.storyboard */,
+				D5AC70ED264AD79400DEE93F /* Model */,
+				D5AC70EB264AD75800DEE93F /* View */,
+				D5AC70EC264AD76500DEE93F /* Controller */,
+				D5AC70F0264AEA1100DEE93F /* Helper */,
 				D5AC70DC264A790B00DEE93F /* Assets.xcassets */,
+				D5AC70D5264A790700DEE93F /* SceneDelegate.swift */,
+				D5AC70D3264A790700DEE93F /* AppDelegate.swift */,
 				D5AC70DE264A790B00DEE93F /* LaunchScreen.storyboard */,
 				D5AC70E1264A790B00DEE93F /* Info.plist */,
-				D5AC70E7264A8ED400DEE93F /* githubData.swift */,
 			);
 			path = "Github-Users";
+			sourceTree = "<group>";
+		};
+		D5AC70EB264AD75800DEE93F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5AC70D9264A790700DEE93F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D5AC70EC264AD76500DEE93F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D5AC70E9264ABD9F00DEE93F /* ShowDetailsController.swift */,
+				D5AC70D7264A790700DEE93F /* ViewController.swift */,
+				D5AC70F3264AEEA700DEE93F /* CustomTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D5AC70ED264AD79400DEE93F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5AC70E7264A8ED400DEE93F /* githubData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D5AC70F0264AEA1100DEE93F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				D5AC70EE264AE9F600DEE93F /* Helper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +184,10 @@
 				D5AC70E8264A8ED400DEE93F /* githubData.swift in Sources */,
 				D5AC70D8264A790700DEE93F /* ViewController.swift in Sources */,
 				D5AC70EA264ABD9F00DEE93F /* ShowDetailsController.swift in Sources */,
+				D5AC70F4264AEEA700DEE93F /* CustomTableViewCell.swift in Sources */,
 				D5AC70D4264A790700DEE93F /* AppDelegate.swift in Sources */,
 				D5AC70D6264A790700DEE93F /* SceneDelegate.swift in Sources */,
+				D5AC70EF264AE9F600DEE93F /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

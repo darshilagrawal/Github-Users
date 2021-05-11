@@ -71,11 +71,23 @@ extension ViewController:UITableViewDataSource  , UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! CustomTableViewCell
         cell.textLabel?.text=fetchedUser[indexPath.row].login
+        cell.textLabel?.textAlignment = .center
         cell.accessoryType = .detailDisclosureButton
+        
+        // Image in The Cell
+        let imageValue=fetchedUser[indexPath.row].avatar_url
+        if let url = URL(string: imageValue){
+            cell.rowImage.loadFrom(url: url)
+        }
+        
+            
         return cell
 
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100.0
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == fetchedUser.count-1{
