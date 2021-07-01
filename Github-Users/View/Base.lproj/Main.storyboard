@@ -83,7 +83,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcj-oU-Hzd" customClass="AnimationView" customModule="Lottie">
                                 <rect key="frame" x="40" y="662" width="334" height="200"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.1568284929" green="0.2117825747" blue="0.33328804369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="coffee"/>
                                 </userDefinedRuntimeAttributes>
