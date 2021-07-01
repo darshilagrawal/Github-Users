@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Lottie
 
 class ShowDetailsController: UIViewController {
     
+    @IBOutlet weak var animationView: AnimationView!
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var nameOfUser: UILabel!
@@ -17,8 +19,19 @@ class ShowDetailsController: UIViewController {
     override func viewDidLoad() {
         navigationItem.title=login
         super.viewDidLoad()
-        //        print(imageValue!)
-        //        print(login!)
+        animationView.contentMode = .scaleAspectFit
+          
+          // 2. Set animation loop mode
+          
+          animationView.loopMode = .loop
+          
+          // 3. Adjust animation speed
+          
+          animationView.animationSpeed = 0.5
+          
+          // 4. Play animation
+          animationView.play()
+  
         nameOfUser.text = login ?? "Default User"
         guard let url = URL(string: imageValue) else { return }
         profileImage.loadFrom(url: url)

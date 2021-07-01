@@ -75,24 +75,38 @@
                                     <constraint firstAttribute="height" constant="154" id="Vvb-It-KLM"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-a7-vIt">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-a7-vIt">
                                 <rect key="frame" x="76" y="533" width="271" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bcj-oU-Hzd" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="40" y="662" width="334" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="coffee"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T1h-bz-YhB"/>
                         <color key="backgroundColor" red="0.1568284929" green="0.2117825747" blue="0.33328804369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Vi2-a7-vIt" firstAttribute="leading" secondItem="T1h-bz-YhB" secondAttribute="leading" constant="76" id="0bQ-An-Ein"/>
                             <constraint firstItem="T1h-bz-YhB" firstAttribute="trailing" secondItem="L99-MW-VE7" secondAttribute="trailing" constant="113" id="2S7-QG-Hjg"/>
+                            <constraint firstItem="Bcj-oU-Hzd" firstAttribute="top" secondItem="Vi2-a7-vIt" secondAttribute="bottom" constant="93" id="5Pt-MY-LPH"/>
+                            <constraint firstItem="Vi2-a7-vIt" firstAttribute="top" secondItem="L99-MW-VE7" secondAttribute="bottom" constant="8" id="QUu-mS-Bxj"/>
+                            <constraint firstItem="T1h-bz-YhB" firstAttribute="trailing" secondItem="Vi2-a7-vIt" secondAttribute="trailing" constant="67" id="UME-Jq-S5h"/>
+                            <constraint firstItem="T1h-bz-YhB" firstAttribute="trailing" secondItem="Bcj-oU-Hzd" secondAttribute="trailing" constant="40" id="Vp5-J6-iqa"/>
                             <constraint firstItem="L99-MW-VE7" firstAttribute="top" secondItem="T1h-bz-YhB" secondAttribute="top" constant="283" id="c5C-7b-B0K"/>
+                            <constraint firstItem="T1h-bz-YhB" firstAttribute="bottom" secondItem="Bcj-oU-Hzd" secondAttribute="bottom" id="e7b-7E-dBC"/>
+                            <constraint firstItem="Bcj-oU-Hzd" firstAttribute="leading" secondItem="T1h-bz-YhB" secondAttribute="leading" constant="40" id="nLT-63-dwr"/>
                             <constraint firstItem="L99-MW-VE7" firstAttribute="leading" secondItem="T1h-bz-YhB" secondAttribute="leading" constant="114" id="t65-fm-qam"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bKP-Cm-oz7"/>
                     <connections>
+                        <outlet property="animationView" destination="Bcj-oU-Hzd" id="qUL-hO-hdA"/>
                         <outlet property="nameOfUser" destination="Vi2-a7-vIt" id="S2x-EG-KsM"/>
                         <outlet property="profileImage" destination="L99-MW-VE7" id="SkV-1m-wUK"/>
                     </connections>
