@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51D3E6E269A15F300DE6454 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D51D3E6D269A15F300DE6454 /* SDWebImage */; };
 		D5AC70D4264A790700DEE93F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70D3264A790700DEE93F /* AppDelegate.swift */; };
 		D5AC70D6264A790700DEE93F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70D5264A790700DEE93F /* SceneDelegate.swift */; };
 		D5AC70D8264A790700DEE93F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70D7264A790700DEE93F /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D51D3E6E269A15F300DE6454 /* SDWebImage in Frameworks */,
 				D5C12186268E3E6100C21DE3 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +142,7 @@
 			name = "Github-Users";
 			packageProductDependencies = (
 				D5C12185268E3E6100C21DE3 /* Lottie */,
+				D51D3E6D269A15F300DE6454 /* SDWebImage */,
 			);
 			productName = "Github-Users";
 			productReference = D5AC70D0264A790700DEE93F /* Github-Users.app */;
@@ -170,6 +173,7 @@
 			mainGroup = D5AC70C7264A790700DEE93F;
 			packageReferences = (
 				D5C12184268E3E6100C21DE3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D51D3E6C269A15F300DE6454 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = D5AC70D1264A790700DEE93F /* Products */;
 			projectDirPath = "";
@@ -411,6 +415,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D51D3E6C269A15F300DE6454 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
 		D5C12184268E3E6100C21DE3 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -422,6 +434,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D51D3E6D269A15F300DE6454 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D51D3E6C269A15F300DE6454 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
 		D5C12185268E3E6100C21DE3 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D5C12184268E3E6100C21DE3 /* XCRemoteSwiftPackageReference "lottie-ios" */;

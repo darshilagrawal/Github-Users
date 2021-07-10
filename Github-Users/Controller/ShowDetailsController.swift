@@ -7,6 +7,8 @@
 
 import UIKit
 import Lottie
+import SDWebImage
+
 
 class ShowDetailsController: UIViewController {
     
@@ -34,7 +36,7 @@ class ShowDetailsController: UIViewController {
   
         nameOfUser.text = login ?? "Default User"
         guard let url = URL(string: imageValue) else { return }
-        profileImage.loadFrom(url: url)
+        profileImage.sd_setImage(with: url, completed: nil)
         
         
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CustomTableViewCell: UITableViewCell {
     var userDataObject:User?
@@ -24,7 +25,8 @@ class CustomTableViewCell: UITableViewCell {
         // Image in The Cell
         if let imageValue=userDataObject?.avatar_url{
             if let url = URL(string: imageValue){
-                self.rowImage.loadFrom(url: url)
+//                self.rowImage.loadFrom(url: url)
+                self.rowImage.sd_setImage(with: url, completed: nil)
             }
         }
     }
