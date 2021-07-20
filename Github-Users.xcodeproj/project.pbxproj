@@ -22,6 +22,8 @@
 		D5C12182268E3DB800C21DE3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C12180268E3DB800C21DE3 /* InitialViewController.swift */; };
 		D5C12183268E3DB800C21DE3 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C12181268E3DB800C21DE3 /* InitialViewController.xib */; };
 		D5C12186268E3E6100C21DE3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D5C12185268E3E6100C21DE3 /* Lottie */; };
+		D5D6690C26A72F310079280A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6690B26A72F310079280A /* MainViewModel.swift */; };
+		D5D6690E26A72F520079280A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6690D26A72F520079280A /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		D5C1217E268E3D0300C21DE3 /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
 		D5C12180268E3DB800C21DE3 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = "Github-Users/Controller/InitialViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D5C12181268E3DB800C21DE3 /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InitialViewController.xib; path = "Github-Users/InitialViewController.xib"; sourceTree = SOURCE_ROOT; };
+		D5D6690B26A72F310079280A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D5D6690D26A72F520079280A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		D5AC70D2264A790700DEE93F /* Github-Users */ = {
 			isa = PBXGroup;
 			children = (
+				D5D6690A26A72F130079280A /* View Model */,
 				D5C1217E268E3D0300C21DE3 /* coffee.json */,
 				D5AC70ED264AD79400DEE93F /* Model */,
 				D5AC70EB264AD75800DEE93F /* View */,
@@ -120,8 +125,17 @@
 			isa = PBXGroup;
 			children = (
 				D5AC70EE264AE9F600DEE93F /* Helper.swift */,
+				D5D6690D26A72F520079280A /* Constants.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		D5D6690A26A72F130079280A /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				D5D6690B26A72F310079280A /* MainViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,9 +223,11 @@
 				D5AC70EA264ABD9F00DEE93F /* ShowDetailsController.swift in Sources */,
 				D5AC70F4264AEEA700DEE93F /* CustomTableViewCell.swift in Sources */,
 				D5AC70D4264A790700DEE93F /* AppDelegate.swift in Sources */,
+				D5D6690E26A72F520079280A /* Constants.swift in Sources */,
 				D5AC70D6264A790700DEE93F /* SceneDelegate.swift in Sources */,
 				D5AC70EF264AE9F600DEE93F /* Helper.swift in Sources */,
 				D5C12182268E3DB800C21DE3 /* InitialViewController.swift in Sources */,
+				D5D6690C26A72F310079280A /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
