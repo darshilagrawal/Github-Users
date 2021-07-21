@@ -22,18 +22,10 @@ class ShowDetailsController: UIViewController {
         navigationItem.title=login
         super.viewDidLoad()
         animationView.contentMode = .scaleAspectFit
-          
-          // 2. Set animation loop mode
-          
           animationView.loopMode = .loop
-          
-          // 3. Adjust animation speed
-          
           animationView.animationSpeed = 0.5
-          
-          // 4. Play animation
           animationView.play()
-  
+        
         nameOfUser.text = login ?? "Default User"
         guard let url = URL(string: imageValue) else { return }
         profileImage.sd_setImage(with: url, completed: nil)

@@ -17,8 +17,17 @@ class ViewController: UIViewController{
         tableView.delegate=self
         mainViewModel.fetchData()
         checkBindings()
+        setUpBack()
+        self.title = "Github Users"
     }
     
+    func setUpBack(){
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(systemName: "chevron.backward")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.backward")
+        self.navigationController?.navigationBar.tintColor = .black
+    }
     func checkBindings(){
         mainViewModel.succesBindingToVC = {
             DispatchQueue.main.async {
