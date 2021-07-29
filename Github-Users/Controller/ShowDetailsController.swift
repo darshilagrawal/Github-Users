@@ -28,7 +28,8 @@ class ShowDetailsController: UIViewController {
         
         nameOfUser.text = login ?? "Default User"
         guard let url = URL(string: imageValue) else { return }
-        profileImage.sd_setImage(with: url, completed: nil)
+        profileImage.sd_setImage(with: url,placeholderImage: UIImage(named: "placeholder"), completed: nil)
+        
         
         
     }

@@ -26,7 +26,7 @@ class CustomTableViewCell: UITableViewCell {
         if let imageValue=userDataObject?.avatar_url{
             if let url = URL(string: imageValue){
 //                self.rowImage.loadFrom(url: url)
-                self.rowImage.sd_setImage(with: url, completed: nil)
+                self.rowImage.sd_setImage(with: url,placeholderImage: UIImage(named: "placeholder"), completed: nil)
             }
         }
     }
