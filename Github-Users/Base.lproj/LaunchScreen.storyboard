@@ -17,13 +17,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x1T-JG-Igh">
-                                <rect key="frame" x="67" y="358" width="280" height="180"/>
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GitHub-Mark" translatesAutoresizingMaskIntoConstraints="NO" id="u5t-od-ass">
-                                        <rect key="frame" x="20" y="20" width="240" height="128"/>
+                                        <rect key="frame" x="20" y="20" width="260" height="248"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Github Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3H-u9-ub6">
-                                        <rect key="frame" x="86" y="138" width="108" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Github Users" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v3H-u9-ub6">
+                                        <rect key="frame" x="98.5" y="258" width="103.5" height="22"/>
                                         <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -34,9 +34,11 @@
                                     <constraint firstItem="v3H-u9-ub6" firstAttribute="centerX" secondItem="u5t-od-ass" secondAttribute="centerX" id="AQF-No-QfY"/>
                                     <constraint firstAttribute="bottom" secondItem="v3H-u9-ub6" secondAttribute="bottom" constant="20" id="JIp-3b-cCO"/>
                                     <constraint firstItem="u5t-od-ass" firstAttribute="leading" secondItem="x1T-JG-Igh" secondAttribute="leading" constant="20" id="Lpc-OL-ARS"/>
+                                    <constraint firstAttribute="height" constant="300" id="RZx-2z-7K8"/>
+                                    <constraint firstItem="v3H-u9-ub6" firstAttribute="centerX" secondItem="x1T-JG-Igh" secondAttribute="centerX" id="TgW-b8-aUA"/>
                                     <constraint firstItem="u5t-od-ass" firstAttribute="top" secondItem="x1T-JG-Igh" secondAttribute="top" constant="20" id="XdU-vO-8pM"/>
-                                    <constraint firstItem="v3H-u9-ub6" firstAttribute="leading" secondItem="x1T-JG-Igh" secondAttribute="leading" constant="86" id="cA5-dp-RuZ"/>
                                     <constraint firstAttribute="bottom" secondItem="u5t-od-ass" secondAttribute="bottom" constant="32" id="fi6-Jw-gQG"/>
+                                    <constraint firstAttribute="width" constant="300" id="hKk-xc-1KH"/>
                                     <constraint firstItem="v3H-u9-ub6" firstAttribute="centerX" secondItem="x1T-JG-Igh" secondAttribute="centerX" id="mVO-Cf-Sfj"/>
                                 </constraints>
                             </view>
@@ -46,8 +48,6 @@
                         <constraints>
                             <constraint firstItem="x1T-JG-Igh" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VCr-uY-U3Y"/>
                             <constraint firstItem="x1T-JG-Igh" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fQt-4p-uBp"/>
-                            <constraint firstItem="x1T-JG-Igh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="wfV-Ld-qpw"/>
-                            <constraint firstItem="x1T-JG-Igh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="314" id="yCw-ff-CyI"/>
                         </constraints>
                     </view>
                 </viewController>

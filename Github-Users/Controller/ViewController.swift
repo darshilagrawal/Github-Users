@@ -11,14 +11,27 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     var mainViewModel = MainViewModel()
+    let refresh = UIRefreshControl()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource=self
         tableView.delegate=self
+        tableView.refreshControl = refresh
         mainViewModel.fetchData()
         checkBindings()
         setUpBack()
+        refresh.addTarget(self, action: #selector(refreshPulled), for: .valueChanged)
         self.title = "Github Users"
+    }
+    @objc func refreshPulled(refreshControl: UIRefreshControl){
+        refreshControl.beginRefreshing()
+        let font=UIFont.systemFont(ofSize: 15)
+        let color=UIColor.systemGray3
+        let attributes=[NSAttributedString.Key.font:font,NSAttributedString.Key.foregroundColor:color]
+        refreshControl.attributedTitle = NSAttributedString(string: "Loading Users",attributes: attributes)
+        mainViewModel.fetchedUser = []
+        mainViewModel.fetchData()
+        checkBindings()
     }
     
     func setUpBack(){
@@ -31,6 +44,7 @@ class ViewController: UIViewController{
     func checkBindings(){
         mainViewModel.succesBindingToVC = {
             DispatchQueue.main.async {
+                self.refresh.endRefreshing()
                 self.tableView.reloadData()
             }
         }

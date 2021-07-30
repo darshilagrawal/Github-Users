@@ -69,7 +69,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="L99-MW-VE7">
-                                <rect key="frame" x="114" y="372.5" width="187" height="151"/>
+                                <rect key="frame" x="113.5" y="372.5" width="187" height="151"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="187" id="OfV-IL-A0M"/>
                                     <constraint firstAttribute="height" constant="154" id="Vvb-It-KLM"/>
@@ -77,6 +77,9 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vi2-a7-vIt">
                                 <rect key="frame" x="76" y="533" width="271" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Qj5-E8-XKX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -93,15 +96,14 @@
                         <color key="backgroundColor" red="0.1568284929" green="0.2117825747" blue="0.33328804369999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Vi2-a7-vIt" firstAttribute="leading" secondItem="T1h-bz-YhB" secondAttribute="leading" constant="76" id="0bQ-An-Ein"/>
-                            <constraint firstItem="T1h-bz-YhB" firstAttribute="trailing" secondItem="L99-MW-VE7" secondAttribute="trailing" constant="113" id="2S7-QG-Hjg"/>
                             <constraint firstItem="Bcj-oU-Hzd" firstAttribute="top" secondItem="Vi2-a7-vIt" secondAttribute="bottom" constant="93" id="5Pt-MY-LPH"/>
+                            <constraint firstItem="L99-MW-VE7" firstAttribute="centerY" secondItem="aab-vR-X5i" secondAttribute="centerY" id="8hp-8w-JSC"/>
                             <constraint firstItem="Vi2-a7-vIt" firstAttribute="top" secondItem="L99-MW-VE7" secondAttribute="bottom" constant="8" id="QUu-mS-Bxj"/>
                             <constraint firstItem="T1h-bz-YhB" firstAttribute="trailing" secondItem="Vi2-a7-vIt" secondAttribute="trailing" constant="67" id="UME-Jq-S5h"/>
                             <constraint firstItem="T1h-bz-YhB" firstAttribute="trailing" secondItem="Bcj-oU-Hzd" secondAttribute="trailing" constant="40" id="Vp5-J6-iqa"/>
-                            <constraint firstItem="L99-MW-VE7" firstAttribute="top" secondItem="T1h-bz-YhB" secondAttribute="top" constant="283" id="c5C-7b-B0K"/>
                             <constraint firstItem="T1h-bz-YhB" firstAttribute="bottom" secondItem="Bcj-oU-Hzd" secondAttribute="bottom" id="e7b-7E-dBC"/>
+                            <constraint firstItem="L99-MW-VE7" firstAttribute="centerX" secondItem="aab-vR-X5i" secondAttribute="centerX" id="iY0-34-Xyb"/>
                             <constraint firstItem="Bcj-oU-Hzd" firstAttribute="leading" secondItem="T1h-bz-YhB" secondAttribute="leading" constant="40" id="nLT-63-dwr"/>
-                            <constraint firstItem="L99-MW-VE7" firstAttribute="leading" secondItem="T1h-bz-YhB" secondAttribute="leading" constant="114" id="t65-fm-qam"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bKP-Cm-oz7"/>
