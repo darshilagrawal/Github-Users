@@ -21,7 +21,7 @@ class ViewController: UIViewController{
         checkBindings()
         setUpBack()
         refresh.addTarget(self, action: #selector(refreshPulled), for: .valueChanged)
-        self.title = "Github Users"
+        self.title = StringConstants.github
     }
     @objc func refreshPulled(refreshControl: UIRefreshControl){
         refreshControl.beginRefreshing()
