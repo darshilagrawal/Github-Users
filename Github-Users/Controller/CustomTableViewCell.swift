@@ -13,9 +13,8 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var rowImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
-       
-        // Initialization code
     }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.textLabel?.text=userDataObject?.login
@@ -25,7 +24,6 @@ class CustomTableViewCell: UITableViewCell {
         // Image in The Cell
         if let imageValue=userDataObject?.avatar_url{
             if let url = URL(string: imageValue){
-//                self.rowImage.loadFrom(url: url)
                 self.rowImage.sd_setImage(with: url,placeholderImage: UIImage(named: "placeholder"), completed: nil)
             }
         }
@@ -33,8 +31,5 @@ class CustomTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
-    
 }

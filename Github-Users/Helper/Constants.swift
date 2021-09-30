@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StringConstants{
+struct StringConstants {
     static let baseUrl="https://api.github.com/users?per_page=20"
     static let github = "Github Users"
 }

@@ -7,14 +7,14 @@
 
 import Foundation
 
-class MainViewModel{
+class MainViewModel {
     var fetchedUser=[User]()
     var since=0
     var succesBindingToVC: (() -> ()) = {}
     var failedBindingToVC: (() -> ()) = {}
     func fetchData(){
         let finalURL = "\(StringConstants.baseUrl)&since=\(since)"
-        guard let url = URL(string: finalURL) else{
+        guard let url = URL(string: finalURL) else {
             return
         }
         
@@ -26,11 +26,10 @@ class MainViewModel{
                 print(error.debugDescription)
                 return
             }
-            if let unwrappedData = data{
-                do{
+            if let unwrappedData = data {
+                do {
                     let resultantData=try JSONSerialization.jsonObject(with: unwrappedData, options: .mutableLeaves) as! NSArray
-                    //                    print(resultantData)
-                    for individualUser in resultantData{
+                    for individualUser in resultantData {
                         let eachUser=individualUser as! [String:Any]
                         let login = eachUser["login"] as! String
                         let id = eachUser["id"] as! Int
@@ -38,17 +37,10 @@ class MainViewModel{
                         let followers_url = eachUser["followers_url"] as! String
                         self.fetchedUser.append(User(login: login, id: id, avatar_url: avatar_url, followers_url: followers_url))
                         self.succesBindingToVC()
-                        
                     }
-//                    DispatchQueue.main.async {
-//                        self.tableView.reloadData()
-//                    }
-                    
-                }catch{
+                } catch {
                     print("Failed in Storing Data")
                 }
-                
-                
             }
         }
         task.resume()

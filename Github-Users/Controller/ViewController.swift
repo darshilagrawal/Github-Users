@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var mainViewModel = MainViewModel()
@@ -23,7 +23,8 @@ class ViewController: UIViewController{
         refresh.addTarget(self, action: #selector(refreshPulled), for: .valueChanged)
         self.title = StringConstants.github
     }
-    @objc func refreshPulled(refreshControl: UIRefreshControl){
+    
+    @objc func refreshPulled(refreshControl: UIRefreshControl) {
         refreshControl.beginRefreshing()
         let font=UIFont.systemFont(ofSize: 15)
         let color=UIColor.systemGray3
@@ -34,14 +35,14 @@ class ViewController: UIViewController{
         checkBindings()
     }
     
-    func setUpBack(){
+    func setUpBack() {
         self.navigationController?.navigationBar.backIndicatorImage = UIImage(systemName: "chevron.backward")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
-
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(systemName: "chevron.backward")
         self.navigationController?.navigationBar.tintColor = .black
     }
-    func checkBindings(){
+    
+    func checkBindings() {
         mainViewModel.succesBindingToVC = {
             DispatchQueue.main.async {
                 self.refresh.endRefreshing()
@@ -58,7 +59,6 @@ class ViewController: UIViewController{
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
 }
 
 // MARK: Table View Delegate Components
@@ -70,26 +70,24 @@ extension ViewController:UITableViewDataSource  , UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! CustomTableViewCell
         cell.userDataObject = mainViewModel.fetchedUser[indexPath.row]
-        
         return cell
-        
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100.0
     }
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == mainViewModel.fetchedUser.count-1{
             mainViewModel.since=mainViewModel.since+20
             mainViewModel.fetchData()
-            
         }
     }
-
 }
 
 // MARK: Preparation for Segues
 
-extension ViewController{
+extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let indexPath=tableView.indexPathForSelectedRow
         
