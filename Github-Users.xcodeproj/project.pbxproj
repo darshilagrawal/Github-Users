@@ -22,6 +22,9 @@
 		D5C12182268E3DB800C21DE3 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C12180268E3DB800C21DE3 /* InitialViewController.swift */; };
 		D5C12183268E3DB800C21DE3 /* InitialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5C12181268E3DB800C21DE3 /* InitialViewController.xib */; };
 		D5C12186268E3E6100C21DE3 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D5C12185268E3E6100C21DE3 /* Lottie */; };
+		D5CD22BE276BB1C9000E93CC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D5CD22BD276BB1C9000E93CC /* GoogleService-Info.plist */; };
+		D5CD22C1276BB2DF000E93CC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D5CD22C0276BB2DF000E93CC /* FirebaseAnalytics */; };
+		D5CD22C3276BB2DF000E93CC /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = D5CD22C2276BB2DF000E93CC /* FirebaseRemoteConfig */; };
 		D5D6690C26A72F310079280A /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6690B26A72F310079280A /* MainViewModel.swift */; };
 		D5D6690E26A72F520079280A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D6690D26A72F520079280A /* Constants.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +45,7 @@
 		D5C1217E268E3D0300C21DE3 /* coffee.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coffee.json; sourceTree = "<group>"; };
 		D5C12180268E3DB800C21DE3 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = "Github-Users/Controller/InitialViewController.swift"; sourceTree = SOURCE_ROOT; };
 		D5C12181268E3DB800C21DE3 /* InitialViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = InitialViewController.xib; path = "Github-Users/InitialViewController.xib"; sourceTree = SOURCE_ROOT; };
+		D5CD22BD276BB1C9000E93CC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5D6690B26A72F310079280A /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		D5D6690D26A72F520079280A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +57,8 @@
 			files = (
 				D51D3E6E269A15F300DE6454 /* SDWebImage in Frameworks */,
 				D5C12186268E3E6100C21DE3 /* Lottie in Frameworks */,
+				D5CD22C1276BB2DF000E93CC /* FirebaseAnalytics in Frameworks */,
+				D5CD22C3276BB2DF000E93CC /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,7 @@
 				D5AC70D3264A790700DEE93F /* AppDelegate.swift */,
 				D5AC70DE264A790B00DEE93F /* LaunchScreen.storyboard */,
 				D5AC70E1264A790B00DEE93F /* Info.plist */,
+				D5CD22BD276BB1C9000E93CC /* GoogleService-Info.plist */,
 			);
 			path = "Github-Users";
 			sourceTree = "<group>";
@@ -157,6 +164,8 @@
 			packageProductDependencies = (
 				D5C12185268E3E6100C21DE3 /* Lottie */,
 				D51D3E6D269A15F300DE6454 /* SDWebImage */,
+				D5CD22C0276BB2DF000E93CC /* FirebaseAnalytics */,
+				D5CD22C2276BB2DF000E93CC /* FirebaseRemoteConfig */,
 			);
 			productName = "Github-Users";
 			productReference = D5AC70D0264A790700DEE93F /* Github-Users.app */;
@@ -188,6 +197,7 @@
 			packageReferences = (
 				D5C12184268E3E6100C21DE3 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				D51D3E6C269A15F300DE6454 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				D5CD22BF276BB2DF000E93CC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = D5AC70D1264A790700DEE93F /* Products */;
 			projectDirPath = "";
@@ -205,6 +215,7 @@
 			files = (
 				D5AC70E0264A790B00DEE93F /* LaunchScreen.storyboard in Resources */,
 				D5AC70DD264A790B00DEE93F /* Assets.xcassets in Resources */,
+				D5CD22BE276BB1C9000E93CC /* GoogleService-Info.plist in Resources */,
 				D5C12183268E3DB800C21DE3 /* InitialViewController.xib in Resources */,
 				D5AC70DB264A790700DEE93F /* Main.storyboard in Resources */,
 				D5C1217F268E3D0300C21DE3 /* coffee.json in Resources */,
@@ -447,6 +458,14 @@
 				minimumVersion = 3.2.3;
 			};
 		};
+		D5CD22BF276BB2DF000E93CC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -459,6 +478,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D5C12184268E3E6100C21DE3 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		D5CD22C0276BB2DF000E93CC /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5CD22BF276BB2DF000E93CC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D5CD22C2276BB2DF000E93CC /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5CD22BF276BB2DF000E93CC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
