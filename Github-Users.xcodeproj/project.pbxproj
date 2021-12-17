@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D504FE26276D054400D11A1A /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D504FE25276D054400D11A1A /* AnalyticsManager.swift */; };
 		D51D3E6E269A15F300DE6454 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = D51D3E6D269A15F300DE6454 /* SDWebImage */; };
 		D5AC70D4264A790700DEE93F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70D3264A790700DEE93F /* AppDelegate.swift */; };
 		D5AC70D6264A790700DEE93F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC70D5264A790700DEE93F /* SceneDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D504FE25276D054400D11A1A /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		D5AC70D0264A790700DEE93F /* Github-Users.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-Users.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AC70D3264A790700DEE93F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5AC70D5264A790700DEE93F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				D5AC70EE264AE9F600DEE93F /* Helper.swift */,
 				D5D6690D26A72F520079280A /* Constants.swift */,
+				D504FE25276D054400D11A1A /* AnalyticsManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				D5D6690E26A72F520079280A /* Constants.swift in Sources */,
 				D5AC70D6264A790700DEE93F /* SceneDelegate.swift in Sources */,
 				D5AC70EF264AE9F600DEE93F /* Helper.swift in Sources */,
+				D504FE26276D054400D11A1A /* AnalyticsManager.swift in Sources */,
 				D5C12182268E3DB800C21DE3 /* InitialViewController.swift in Sources */,
 				D5D6690C26A72F310079280A /* MainViewModel.swift in Sources */,
 			);
